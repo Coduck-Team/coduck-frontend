@@ -24,4 +24,5 @@ jobs:
       - name: Run unit tests
         run: |
           npm ci
+          npm install -g jest
           npm run test
