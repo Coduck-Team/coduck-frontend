@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Change NODE_ENV to install all dependencies
+        run: echo "NODE_ENV=development" >> $GITHUB_ENV
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -21,8 +24,8 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run unit tests
-        run: |
-          npm ci
-          npm install -g jest
-          npm run test
+        run: npm run test
