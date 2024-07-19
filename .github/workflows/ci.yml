@@ -33,5 +33,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: List node_modules
+        run: ls -la node_modules
+
       - name: Run unit tests
         run: npm run test
