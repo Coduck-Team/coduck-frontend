@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Change NODE_ENV to install all dependencies
+      - name: Set NODE_ENV
         run: echo "NODE_ENV=development" >> $GITHUB_ENV
 
       - name: Checkout repository
@@ -24,17 +24,14 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Upgrade npm
-        run: npm install -g npm@latest
+      - name: Install Yarn
+        run: corepack enable
 
-      - name: Clear npm cache
-        run: npm cache clean --force
+      - name: Clear yarn cache
+        run: yarn cache clean
 
       - name: Install dependencies
-        run: npm install
-
-      - name: List node_modules
-        run: ls -la node_modules
+        run: yarn install
 
       - name: Run unit tests
-        run: npm run test
+        run: yarn test
