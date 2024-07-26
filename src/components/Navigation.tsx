@@ -59,7 +59,7 @@ export default function Navigation(props: Props) {
 
   return (
     <>
-      <AppBar component='nav'>
+      <AppBar component='nav' position='sticky'>
         <Toolbar>
           <IconButton
             color='inherit'
