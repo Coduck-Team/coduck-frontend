@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <Container component='main'>
       <Navigation />
-      <Stack direction='row' gap={2} mt={2}>
+      <Stack direction={{ sm: 'column', md: 'row' }} gap={2} mt={2}>
         <Paper sx={{ p: 2 }} elevation={3}>
           <Typography variant='body1'>
             The mission of Polygon is to provide platform for creation of
