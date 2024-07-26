@@ -4,6 +4,9 @@ import Home from '@/app/page';
 
 it('renders main page with the text "Get started by editing"', () => {
   render(<Home />);
-  const text = screen.getByText(/Get started by editing/i);
-  expect(text).toBeInTheDocument();
+  const login = screen.getAllByText(/\bLogin\b/i).length;
+  expect(login).toBe(2);
+
+  const register = screen.getAllByText(/\bRegister\b/i).length;
+  expect(register).toBe(2);
 });
