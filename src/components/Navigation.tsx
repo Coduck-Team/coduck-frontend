@@ -39,7 +39,7 @@ export default function Navigation(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant='h6' sx={{ my: 2 }}>
-        MUI
+        Bibimbap
       </Typography>
       <Divider />
       <List>
