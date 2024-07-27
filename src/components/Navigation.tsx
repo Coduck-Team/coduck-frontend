@@ -26,7 +26,11 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Login', 'Register', 'Help'];
+const navItems = [
+  { name: 'Login', link: '/login' },
+  { name: 'Register', link: '/register' },
+  { name: 'Help', link: '/help' },
+];
 
 export default function Navigation(props: Props) {
   const { window } = props;
@@ -44,9 +48,9 @@ export default function Navigation(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -80,8 +84,8 @@ export default function Navigation(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+              <Button key={item.name} sx={{ color: '#fff' }} href={item.link}>
+                {item.name}
               </Button>
             ))}
           </Box>
