@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
+import CustomLink from './CustomLink';
 
 interface Props {
   /**
@@ -49,7 +50,11 @@ export default function Navigation(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton
+              component='a'
+              href={item.link}
+              sx={{ textAlign: 'center' }}
+            >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -74,14 +79,18 @@ export default function Navigation(props: Props) {
           >
             <Menu />
           </IconButton>
-          <Image src='/logo.png' alt='logo' width={64} height={64} />
-          <Typography
+
+          <CustomLink href='/'>
+            {' '}
+            <Image src='/logo.png' alt='logo' width={64} height={64} />
+          </CustomLink>
+          <CustomLink
+            href='/'
             variant='h6'
-            component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, ml: 2 }}
           >
             Bibimbap
-          </Typography>
+          </CustomLink>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item.name} sx={{ color: '#fff' }} href={item.link}>
