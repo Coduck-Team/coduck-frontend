@@ -23,7 +23,6 @@ export default function Home() {
           programming contest problems. Polygon supports the whole development
           cycle:
         </Typography>
-        {/* The following has to have a list using Tailwind CSS */}
         <ul className='list-disc list-inside'>
           <li>problem statement writing</li>
           <li>test data preparing (generators supported)</li>
@@ -44,7 +43,7 @@ export default function Home() {
             Invokers waiting: {serviceSummary.numInvokers}
           </Typography>
         </Paper>
-        <Paper sx={{ p: 2 }} elevation={3}>
+        <Paper sx={{ p: 2 }} elevation={3} data-testid='changelog'>
           {changeLogs.map((log, index) => (
             <Typography key={index} variant='body2'>
               {log}
