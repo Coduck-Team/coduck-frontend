@@ -18,7 +18,12 @@ export default function LoginSubmitBox({
   };
 
   return (
-    <Box component='form' onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+    <Box
+      component='form'
+      onSubmit={handleSubmit}
+      noValidate
+      sx={{ mt: 1, maxWidth: { xs: '75vw', sm: '50vw' }, width: '100%' }}
+    >
       {children}
     </Box>
   );
