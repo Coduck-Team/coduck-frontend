@@ -1,5 +1,4 @@
-import Navigation from '@/components/Navigation';
-import { Container, Paper, Stack, Typography } from '@mui/material';
+import { Paper, Stack, Typography } from '@mui/material';
 
 export default function Home() {
   const serviceSummary = {
@@ -17,45 +16,41 @@ export default function Home() {
   ];
 
   return (
-    <Container component='main'>
-      <Navigation />
-      <Stack direction={{ sm: 'column', md: 'row' }} gap={2} mt={2}>
+    <Stack direction={{ sm: 'column', md: 'row' }} gap={2} mt={2}>
+      <Paper sx={{ p: 2 }} elevation={3}>
+        <Typography variant='body1'>
+          The mission of Polygon is to provide platform for creation of
+          programming contest problems. Polygon supports the whole development
+          cycle:
+        </Typography>
+        <ul className='list-disc list-inside'>
+          <li>problem statement writing</li>
+          <li>test data preparing (generators supported)</li>
+          <li>model solutions (including correct and wittingly incorrect)</li>
+          <li>judging</li>
+          <li>automatic validation</li>
+        </ul>
+      </Paper>
+      <Stack direction='column' gap={2}>
         <Paper sx={{ p: 2 }} elevation={3}>
-          <Typography variant='body1'>
-            The mission of Polygon is to provide platform for creation of
-            programming contest problems. Polygon supports the whole development
-            cycle:
+          <Typography variant='body2'>
+            Registered users: {serviceSummary.numUsers}
           </Typography>
-          {/* The following has to have a list using Tailwind CSS */}
-          <ul className='list-disc list-inside'>
-            <li>problem statement writing</li>
-            <li>test data preparing (generators supported)</li>
-            <li>model solutions (including correct and wittingly incorrect)</li>
-            <li>judging</li>
-            <li>automatic validation</li>
-          </ul>
+          <Typography variant='body2'>
+            Problems total: {serviceSummary.numProblems}
+          </Typography>
+          <Typography variant='body2'>
+            Invokers waiting: {serviceSummary.numInvokers}
+          </Typography>
         </Paper>
-        <Stack direction='column' gap={2}>
-          <Paper sx={{ p: 2 }} elevation={3}>
-            <Typography variant='body2'>
-              Registered users: {serviceSummary.numUsers}
+        <Paper sx={{ p: 2 }} elevation={3} data-testid='changelog'>
+          {changeLogs.map((log, index) => (
+            <Typography key={index} variant='body2'>
+              {log}
             </Typography>
-            <Typography variant='body2'>
-              Problems total: {serviceSummary.numProblems}
-            </Typography>
-            <Typography variant='body2'>
-              Invokers waiting: {serviceSummary.numInvokers}
-            </Typography>
-          </Paper>
-          <Paper sx={{ p: 2 }} elevation={3}>
-            {changeLogs.map((log, index) => (
-              <Typography key={index} variant='body2'>
-                {log}
-              </Typography>
-            ))}
-          </Paper>
-        </Stack>
+          ))}
+        </Paper>
       </Stack>
-    </Container>
+    </Stack>
   );
 }

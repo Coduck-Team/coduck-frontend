@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { ThemeProvider } from '@mui/material';
+import { Container, ThemeProvider } from '@mui/material';
 import theme from '../theme';
 import './globals.css';
+import Navigation from '@/components/Navigation';
 
 export const metadata: Metadata = {
   title: 'Bibimbap',
@@ -18,7 +19,12 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <Container component='main'>
+              <Navigation />
+              {children}
+            </Container>
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
