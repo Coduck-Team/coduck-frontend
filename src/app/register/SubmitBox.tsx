@@ -2,11 +2,7 @@
 import { FormEvent } from 'react';
 import { Box } from '@mui/material';
 
-export default function RegisterSubmitBox({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RegisterSubmitBox({ children }: { children: React.ReactNode }) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
