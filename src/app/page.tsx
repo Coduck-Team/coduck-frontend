@@ -19,9 +19,8 @@ export default function Home() {
     <Stack direction={{ sm: 'column', md: 'row' }} gap={2} mt={2}>
       <Paper sx={{ p: 2 }} elevation={3}>
         <Typography variant='body1'>
-          The mission of Polygon is to provide platform for creation of
-          programming contest problems. Polygon supports the whole development
-          cycle:
+          The mission of Polygon is to provide platform for creation of programming
+          contest problems. Polygon supports the whole development cycle:
         </Typography>
         <ul className='list-disc list-inside'>
           <li>problem statement writing</li>

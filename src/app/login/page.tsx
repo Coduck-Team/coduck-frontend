@@ -9,9 +9,11 @@ import {
   Typography,
 } from '@mui/material';
 import { LockOutlined } from '@mui/icons-material';
+
+import LoginSubmitBox from './SubmitBox';
+
 import Copyright from '@/components/Copyright';
 import CustomLink from '@/components/CustomLink';
-import LoginSubmitBox from './SubmitBox';
 
 export default function Login() {
   return (
@@ -55,12 +57,7 @@ export default function Login() {
             control={<Checkbox value='remember' color='primary' />}
             label='Remember me'
           />
-          <Button
-            type='submit'
-            fullWidth
-            variant='contained'
-            sx={{ mt: 3, mb: 2 }}
-          >
+          <Button type='submit' fullWidth variant='contained' sx={{ mt: 3, mb: 2 }}>
             Login
           </Button>
           <Grid container>

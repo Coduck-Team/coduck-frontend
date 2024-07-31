@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
+
 import CustomLink from './CustomLink';
 
 interface Props {
@@ -50,11 +51,7 @@ export default function Navigation(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton
-              component='a'
-              href={item.link}
-              sx={{ textAlign: 'center' }}
-            >
+            <ListItemButton component='a' href={item.link} sx={{ textAlign: 'center' }}>
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -63,8 +60,7 @@ export default function Navigation(props: Props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <>

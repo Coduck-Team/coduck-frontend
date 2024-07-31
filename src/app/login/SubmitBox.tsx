@@ -3,11 +3,7 @@ import { FormEvent } from 'react';
 import { Box } from '@mui/material';
 
 // This file holds the handling logic for the login form submission.
-export default function LoginSubmitBox({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LoginSubmitBox({ children }: { children: React.ReactNode }) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
