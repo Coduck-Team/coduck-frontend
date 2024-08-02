@@ -78,7 +78,7 @@ export default function Navigation(props: Props) {
 
           <CustomLink href='/'>
             {' '}
-            <Image src='/logo.png' alt='logo' width={64} height={64} />
+            <Image src='/logo.png' alt='logo' width={64} height={64} priority />
           </CustomLink>
           <CustomLink
             href='/'
