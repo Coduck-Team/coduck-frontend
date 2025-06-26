@@ -53,7 +53,7 @@ export default function ProblemsPage() {
   };
 
   return (
-    <div className='min-h-screen bg-gray-50'>
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
       <ActionBar />
       {/* Main Content */}
       <div className='container px-4 py-6 mx-auto'>
@@ -85,7 +85,7 @@ export default function ProblemsPage() {
         </div>
 
         {/* Problems Table */}
-        <div className='bg-white rounded-lg border shadow-sm overflow-hidden'>
+        <div className='bg-white rounded-2xl border border-gray-200/60 shadow-xl shadow-gray-900/5 overflow-hidden'>
           <div className='overflow-x-auto'>
             <table className='w-full'>
               <thead className='bg-gray-50 border-b'>
