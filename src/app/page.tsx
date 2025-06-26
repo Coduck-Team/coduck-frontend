@@ -75,7 +75,7 @@ export default function Home() {
                   <CardTitle className='text-xl'>Latest Updates</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className='space-y-4'>
+                  <div className='space-y-4' data-testid='changelog'>
                     {[
                       {
                         date: '27 Jun 2016',
@@ -100,6 +100,10 @@ export default function Home() {
                         date: '8 Mar 2009',
                         content:
                           'Use public issue tracker to post bug or feature request.',
+                      },
+                      {
+                        date: '8 Mar 2009',
+                        content: 'Beta version has been deployed.',
                       },
                     ].map((update, index) => (
                       <div key={index} className='flex gap-3'>
