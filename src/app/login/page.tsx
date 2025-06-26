@@ -1,6 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import { User } from 'lucide-react';
+
+import LoginSubmitBox from './SubmitBox';
+
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,8 +17,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
-import { User } from 'lucide-react';
-import LoginSubmitBox from './SubmitBox';
 
 export default function Login() {
   return (
@@ -74,7 +76,7 @@ export default function Login() {
                   Forgot password?
                 </Link>
                 <div>
-                  Don't have an account?{' '}
+                  Don&apos;t have an account?{' '}
                   <Link href='/register' className='text-primary hover:underline'>
                     Sign Up
                   </Link>
@@ -84,7 +86,6 @@ export default function Login() {
           </LoginSubmitBox>
         </Card>
       </main>
-
       <Footer />
     </div>
   );

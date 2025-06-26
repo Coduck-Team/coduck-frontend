@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 import { UserPlus } from 'lucide-react';
+
+import RegisterSubmitBox from './SubmitBox';
+
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import {
@@ -14,7 +17,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
-import RegisterSubmitBox from './SubmitBox';
 import TACModal from '@/components/TACModal';
 
 export default function Register() {

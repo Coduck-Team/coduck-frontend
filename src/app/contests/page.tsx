@@ -1,32 +1,21 @@
 'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
-
 import { useMemo, useState } from 'react';
-
 import {
-  Search,
   Star,
-  Plus,
-  Calendar,
-  User,
-  Clock,
   ArrowUpDown,
   Trophy,
   Users,
   FileCode2,
-  Settings,
   Trash2,
   Edit,
 } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { DuckCreateButton } from '@/components/duck-create-button';
-
-import contests from '@/data/contests';
+// import contests from '@/data/contests';
 import Footer from '@/components/Footer';
 
 type SortKey = 'id' | 'name' | 'owner' | 'modificationTime' | 'creationTime';

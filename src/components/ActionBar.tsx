@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import {
   FileText,
-  Settings,
   Send,
   Play,
   Eye,
@@ -15,7 +14,6 @@ import {
   BookOpenCheck,
   MessageCircleCode,
 } from 'lucide-react';
-import Link from 'next/link';
 
 import InfoTooltip from '@/components/InfoTooltip';
 import { Button } from '@/components/ui/button';

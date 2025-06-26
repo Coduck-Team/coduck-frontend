@@ -1,29 +1,13 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { Star, Eye, Edit, Trash2, ArrowUpDown, FileCode2 } from 'lucide-react';
 
-import Link from 'next/link';
-import Image from 'next/image';
-import {
-  Search,
-  Star,
-  FileText,
-  Settings,
-  Download,
-  Eye,
-  Edit,
-  Trash2,
-  Play,
-  ArrowUpDown,
-  FileCode2,
-} from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import Footer from '@/components/Footer';
 import ActionBar from '@/components/ActionBar';
-
-import problems from '@/data/problems';
+// import problems from '@/data/problems';
 import { DuckCreateButton } from '@/components/duck-create-button';
 
 type SortKey = 'id' | 'name' | 'owner' | 'modified';
