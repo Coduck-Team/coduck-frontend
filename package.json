@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "npx prettier --config ./.prettierrc --write **/*.{ts,tsx}",
+    "prettier:check": "npx prettier --config ./.prettierrc --check **/*.{ts,tsx}",
     "test": "jest",
     "test:watch": "jest --watch"
   },
