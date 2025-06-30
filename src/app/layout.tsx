@@ -5,11 +5,12 @@ import { Container, ThemeProvider } from '@mui/material';
 import theme from '../theme';
 
 import './globals.css';
-import Navigation from '@/components/Navigation';
+// import Navigation from '@/components/Navigation';
+import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  title: 'Bibimbap',
-  description: 'A delicious Korean dish',
+  title: 'coduck',
+  description: 'coduck~',
 };
 
 export default function RootLayout({
@@ -22,8 +23,9 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
-            <Container component='main'>
-              <Navigation />
+            <Container component='main' maxWidth={false} disableGutters>
+              {/* <Navigation /> */}
+              <Header />
               {children}
             </Container>
           </ThemeProvider>

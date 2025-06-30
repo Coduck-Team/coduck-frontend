@@ -4,7 +4,6 @@ about: Provide guideline for a new PR
 title: ''
 labels: ''
 assignees: plzfday
-
 ---
 
 ## What is this feature?
@@ -13,6 +12,6 @@ assignees: plzfday
 
 ## Task Details
 
-- [ ] 
+- [ ]
 
 ## Reference Materials (Optional)
